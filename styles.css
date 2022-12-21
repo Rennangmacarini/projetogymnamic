@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: #FFFF;
+}
+
+.body, a, span, h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;  
+}
+
+.text {
+    margin: 3.5rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.text h1 {
+    font-size: 2rem;
+}
+
+.text p {
+    font-size: 1.4rem;
+}
+
+
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.video {
+    width: 700px;
+}
+
+
+.card-text, .card-text-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0rem;
+    gap: 1rem;
+}
+
+.card-text-1 {
+    margin-top: 8rem;
+}
+
+
+.body {
+    margin: 2rem 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: 0.2s;
+	transform: scale(2);
+}
+
+a span {
+    position: relative;
+    z-index: 0;
+    color: #fff;
+}
+
+a .liquid {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: orangered;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    transition: 0.6s;
+}
+
+a .liquid::after,
+a .liquid::before {
+    position: absolute;
+    content: "";
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 0;
+    transform: translate(-25%, -75%);
+}
+
+a .liquid::after {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    box-shadow: 0 0 10px 5px #ff0800, inset 0 0 5px #ff4400;
+    animation: animate 5s linear infinite;
+    opacity: 0.8;
+}
+
+a .liquid::before {
+    border-radius: 40%;
+    box-shadow: 0 0 10px rgba(26, 26, 26, 0.5),
+        inset 0 0 5px rgba(26, 26, 26, 0.5);
+    background: rgba(26, 26, 26, 0.5);
+
+    animation: animate 7s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-25%, -75%) rotate(0);
+    }
+    100% {
+        transform: translate(-25%, -75%) rotate(360deg);
+    }
+}
+a:hover .liquid {
+    top: -120px;
+}
+
+a:hover {
+    box-shadow: 0 0 5px #ff4400, inset 0 0 5px #ff5100;
+    transition-delay: 0.2s;
+}
+
+.card-icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.icon img {
+    width: 50px;
+}
+
+.icon h4 {
+    font-size: 0.8rem;
+}
+
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+
+}
+
+.conteudo h2 {
+ margin-top: 5rem;
+ width: 600px;
+ color: white;
+ font-size: 1.4rem;
+ text-align: justify;
+}
+
+.conteudo strong {
+    color: orangered;
+}
+
+.conteudo p {
+    color: white;
+    text-align: end;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+}
+
+.conteudo b {
+    font-size: 0.8rem;
+    color: orangered;
+}
+
+.global-carousel {
+    margin: 5rem;
+    text-align: center;
+}
+
+.global-carousel h1 {
+    font-size: 1.6rem;
+}
+
+
+
+.swiper {
+    width: 65%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 8px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .depoimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .depoimento p {
+    width: 600px;
+    font-size: 0.8rem;
+  }
+
+  .global-academia {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem;
+  }
+
+  .academia-card {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .academia-card img {
+    width: 300px;
+  }
+
+  .academia-texto h2{
+    margin: 2rem;
+    text-align: center;
+    width: 600px;
+  }
+
+  .giff img {
+    width: 250px;
+  }
+
+  .grafico-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .card-texto-grafico {
+    width: 300px;
+  }
+
+  .card-texto-grafico h1 {
+    color: orangered;
+    font-size: 1.6rem;
+  }
+
+  .card-texto-grafico b {
+    color: orangered;
+  }
+
+  .card-texto-grafico p {
+    margin-top: 1rem;
+  }
+
+
+  .global-informacao {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .informacao h1 {
+    margin: 1rem;
+  }
+
+  .informacao h2 {
+    margin-bottom: 2rem;
+  }
+
+
+  .global-informacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .card-informacao {
+    position:relative;
+  }
+
+  .informacao-texto {
+    position: absolute;
+    top: 55%;
+    left: 8%;
+    text-align: left;
+  }
+
+  .card-informacao img {
+    width: 350px;
+    height: 550px;
+    object-fit: cover;
+  }
+
+  .card-informacao h3 {
+    color: orangered;
+    font-size: 1.5rem;
+  }
+
+  .card-informacao h4 {
+    margin: 1rem 0rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .card-informacao p {
+    font-size: 0.8rem;
+  }
+
+  .informacao-texto-1 {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .informacao-texto-1 p {
+    margin: 1rem;
+  }
+
+
+  .global-treino {
+    margin-top: 8rem;
+    text-align: center;
+  }
+
+  .card-treino{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem;
+  }
+
+  .card-treino img {
+    width: 200px;
+    height: 300px;
+    border-radius: 18px;
+    object-fit: cover;
+  }
+
+
+  .global-clube {
+    margin-top: 8rem;
+    text-align: center;
+  }
+
+  .global-clube h1 {
+    margin: 3rem;
+  }
+
+  .global-clube p {
+    margin: 0 auto;
+    width: 500px;
+  }
+
+
+  .clube {
+    text-align: center;
+  }
+
+  .clube-1 img {
+    width: 500px;
+  }
+
+  .clube-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .clube-texto p {
+    margin: 1rem 0rem;
+  }
+
+  .clube-texto-1 {
+    margin-top: -8rem;
+  }
+
+
+  .global-carousel {
+    margin: 4rem 0rem;
+  }
+
+  .perguntas {
+    margin: 5rem;
+    text-align: center;
+  }
+
+  .perguntas h1 {
+    margin: 1rem 0rem;
+  }
+
+  .card-pergunta{
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid orangered;
+  }
+
+  .card-pergunta h2 {
+   margin: 1rem;
+   background-color: orangered;
+   padding: 1rem;
+   border-radius: 8px;
+   cursor: pointer;
+   
+  }
+
+  .card-pergunta p {
+    padding: 1rem;
+  }
+
+.hide {
+  display: none;
+}
+
+
+.oportunidade-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.global-oportunidade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0rem;
+}
+
+.oportunidade-img img {
+  object-fit: cover;
+  width: 600px;
+  height: 610px;
+  margin-top: 3rem;
+}
+
+.oportunidade-informacao, .opcao-01 {
+  width: 500px;
+}
+
+.oportunidade-informacao h1 {
+   margin: 1rem;
+}
+
+.opcao-01 h3 {
+  width: 120px;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: orangered;
+}
+
+.opcao-01 p {
+  text-align: justify;
+}
+
+
+.opcao-02 p {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-footer {
+  margin: 6rem 0rem;
+  text-align: center;
+}
+
+.logo {
+  margin-top: 8rem;
+  text-align: center;
+}
+.logo img {
+  width: 200px;
+}
+
+.logo p {
+  margin: 2rem;
+}
